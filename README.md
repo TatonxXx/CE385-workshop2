@@ -35,3 +35,15 @@ SERVICE_ITEM	item_name	Simple	VARCHAR(100)	เก็บชื่อยา/บร
 SERVICE_ITEM	quantity	Simple	INTEGER	เก็บจำนวนรายการ
 
 SERVICE_ITEM	price	Simple	NUMERIC(10,2)	เก็บราคาที่มีทศนิยม
+
+OWNER_PHONE owner_id Foreign Key INTEGER เก็บ ID ของเจ้าของ ชี้ไปที่ OWNER.id
+
+PET owner_id Foreign Key INTEGER เก็บ ID ของเจ้าของ ชี้ไปที่ OWNER.id
+
+VET_SPECIALTY vet_id Foreign Key INTEGER เก็บ ID ของสัตวแพทย์ ชี้ไปที่ VET.id
+
+VISIT pet_id Foreign Key INTEGER เก็บ ID ของสัตว์เลี้ยง ชี้ไปที่ PET.id
+
+VISIT vet_id Foreign Key INTEGER เก็บ ID ของสัตวแพทย์ ชี้ไปที่ VET.id
+
+SERVICE_ITEM visit_id Foreign Key INTEGER เก็บ ID ของการเข้ารับบริการ ชี้ไปที่ VISIT.id
